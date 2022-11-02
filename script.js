@@ -4,7 +4,7 @@ const minutesEl = document.getElementById('mins')
 const secondsEl = document.getElementById('seconds')
 
 
-let newDays = "20 Nov 2022"
+let newDays = "15 Nov 2022"
 
 function countdown(){
     const newDayDate = new Date(newDays)
@@ -21,20 +21,11 @@ function countdown(){
     hoursEl.innerHTML = formatTime(hours)
     minutesEl.innerHTML = formatTime(mins)
     secondsEl.innerHTML = formatTime(seconds)
-
-    daysEL.innerHTML = formatPoint(days)
-    hoursEl.innerHTML = formatPoint(hours)
-    minutesEl.innerHTML = formatPoint(mins)
-    secondsEl.innerHTML = seconds
 }
 
 
 function formatTime(time){
     return time < 10 ? `0${time}` : time
-}
-
-function formatPoint(point){
-    return point > 0 ? `${point} :` : `${point} :`
 }
 
 countdown()
